@@ -1,31 +1,51 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Confirmation - Grade Added</title>
-<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+<meta charset="UTF-8">
+<title>Graded Added Confirmation</title>
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+	integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+	crossorigin="anonymous">
+<link href="/style.css" rel="stylesheet" />
 </head>
 <body>
+
 	<div class="container">
-		<h1>Rooms at Grand Circus</h1>
-		<form action="/rooms/edit" method="post">
-		<input type="hidden" name="id" value="${grade.id}" />
-		<table class="table">
-			<tr>
-				<th scope="row">Name</th>
-				<td><input type="text" name="name" value="${grade.name}" /></td>
-			</tr>
-			<tr>
-				<th scope="row">Max Capacity</th>
-				<td><input type="number" name="maxCapacity" value="${grade.maxCapacity}" /></td>
-			</tr>
-			
-		</table>
-		
-		</form>
+
+		<h3 class="display-4"> Grade Added</h3>
+
+<p> The grade was added to the database. </p>
+
+<h2>Details</h2>
+		<p>
+			Name:
+			<c:out value="${ name }" />
+		</p>
+
+		<p>
+		Type: 
+		<c:out value="${ type }" />
+		</p>
+
+		<p>
+		Score:
+		<c:out value="${ score }" />
+		</p>
+		<p>
+		Total:
+		<c:out value="${ total }" />
+		</p>
+
 	</div>
+	<ul>
+		<li><a href="/">Return to grade list</a></li>
+	</ul>
+
 </body>
 </html>

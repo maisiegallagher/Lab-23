@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
@@ -10,9 +10,9 @@
 </head>
 <body>
 	<div class="container">
-		<h1>Grades List</h1>
+		<h1>Grades at Grand Circus</h1>
 		<h2>Add a Grade</h2>
-		<form action="/homepage/add-form" method="post">
+		<form action="/grades/add" method="post">
 		<table class="table">
 			<tr>
 				<th scope="row">Name</th>
@@ -20,19 +20,20 @@
 			</tr>
 			<tr>
 				<th scope="row">Type</th>
-				<td><input type="number" name="type" /></td>
+				<td><input type="text" name="type" /></td>
 			</tr>
 			<tr>
 				<th scope="row">Score</th>
-				<td><input type="number" name="score" /></td>	
+				<td><input type="number" name="score" /></td>
 			</tr>
 			<tr>
 				<th scope="row">Total</th>
 				<td><input type="number" name="total" /></td>
 			</tr>
+			
 		</table>
 		<button type="submit" class="btn btn-primary">Add</button>
-		<a class="btn link" href="/">Cancel</a>
+		<a class="btn link" href="/grades">Cancel</a>
 		</form>
 	</div>
 </body>

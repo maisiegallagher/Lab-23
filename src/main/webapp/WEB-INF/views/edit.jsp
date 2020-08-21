@@ -10,28 +10,31 @@
 </head>
 <body>
 	<div class="container">
-		<h1>Your Grades here</h1>
+		<h1>Grades at Grand Circus</h1>
+		<form action="/grades/edit" method="post">
+		<input type="hidden" name="id" value="${grade.id}" />
 		<table class="table">
 			<tr>
 				<th scope="row">Name</th>
-				<td>${grade.name}</td>
+				<td><input type="text" name="name" value="${grade.name}" /></td>
 			</tr>
 			<tr>
 				<th scope="row">Type</th>
-				<td>${grade.type}</td>
+				<td><input type="text" name="type" value="${grade.type}" /></td>
 			</tr>
 			<tr>
 				<th scope="row">Score</th>
-				<td>${grade.score}</td>
+				<td><input type="number" name="score" value="${grade.score}" /></td>
 			</tr>
 			<tr>
 				<th scope="row">Total</th>
-				<td>${grade.total}</td>
+				<td><input type="number" name="total" value="${grade.total}" /></td>
 			</tr>
+			
 		</table>
-		<a class="btn btn-secondary" href="/homepage/edit?id=${grade.id}.id}">Edit</a>
-		<a class="btn btn-danger" href="/homepage/delete?id=${grade.id}">Delete</a>
-		<a class="btn link" href="/">Back to List</a>
+		<button type="submit" class="btn btn-primary">Save Changes</button>
+		<a class="btn link" href="/grades/detail?id=${grade.id}">Cancel</a>
+		</form>
 	</div>
 </body>
 </html>
