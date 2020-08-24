@@ -25,21 +25,21 @@
 <h2>Details</h2>
 		<p>
 			Name:
-			<c:out value="${ name }" />
+			<c:out value="${ grade.name }" />
 		</p>
 
 		<p>
 		Type: 
-		<c:out value="${ type }" />
+		<c:out value="${ grade.type }" />
 		</p>
 
 		<p>
 		Score:
-		<c:out value="${ score }" />
+		<c:out value="${ grade.score }" />
 		</p>
 		<p>
 		Total:
-		<c:out value="${ total }" />
+		<c:out value="${ grade.total }" />
 		</p>
 
 	</div>

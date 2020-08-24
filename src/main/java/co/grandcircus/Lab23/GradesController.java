@@ -63,10 +63,10 @@ public class GradesController {
 		return "add";
 	}
 	
-	@PostMapping("/grades/add")
-	public String submitAdd(Grade grade) {		
+	@PostMapping("/grades/add-confirm")
+	public String submitAdd(Grade grade, Model model) {		
 		gradesDao.create(grade);
-		
+		model.addAttribute("grade", grade);
 		return "add-confirm";
 	}
 	
